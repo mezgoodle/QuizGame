@@ -32,7 +32,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
+        android:padding="9dp"
         android:orientation="horizontal">
 
         <Button
@@ -44,7 +44,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="@string/start"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="@color/white"/>
     </LinearLayout>
 </RelativeLayout>
