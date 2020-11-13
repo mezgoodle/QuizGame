@@ -2,4 +2,5 @@
     <string name="app_name">QuizGame</string>
     <string name="start">Start</string>
     <string name="back">Back</string>
+    <string name="level">Level:</string>
 </resources>
