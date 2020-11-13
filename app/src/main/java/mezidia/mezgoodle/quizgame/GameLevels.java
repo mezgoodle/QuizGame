@@ -6,8 +6,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.Console;
 
 public class GameLevels extends AppCompatActivity {
 
@@ -27,6 +30,21 @@ public class GameLevels extends AppCompatActivity {
                 // command for back button
                 try {
                     Intent intent = new Intent(GameLevels.this, MainActivity.class);
+                    startActivity(intent);finish();
+                } catch (Exception e) {
+
+                }
+            }
+        });
+
+        // Button for step on level1
+        TextView textView1 = (TextView)findViewById(R.id.textView1);
+
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level1.class);
                     startActivity(intent);finish();
                 } catch (Exception e) {
 
