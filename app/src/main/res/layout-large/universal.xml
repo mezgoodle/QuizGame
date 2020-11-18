@@ -52,7 +52,7 @@
                     android:layout_weight="1"
                     android:text="@string/level"
                     android:textSize="40sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:gravity="right"
                     android:padding="10dp"
                     />
