@@ -23,6 +23,9 @@ public class Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        TextView text_levels = findViewById(R.id.text_levels);
+        text_levels.setText(R.string.level1);
+
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
         // Create round corners for left image
         img_left.setClipToOutline(true);
@@ -66,5 +69,30 @@ public class Level1 extends AppCompatActivity {
         });
 
         dialog.show(); // show dialog window
+
+        // Button Back
+        Button btn_back = (Button)findViewById(R.id.button_back_level);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level1.this, GameLevels.class);
+                    startActivity(intent);finish();
+                } catch (Exception e) {
+                    // Empty
+                }
+            }
+        });
+    }
+
+    // System button back
+    @Override
+    public void onBackPressed() {
+        try {
+            Intent intent = new Intent(Level1.this, GameLevels.class);
+            startActivity(intent);finish();
+        } catch (Exception e) {
+            // Empty
+        }
     }
 }

@@ -3,5 +3,6 @@
     <string name="start">Start</string>
     <string name="back">Back</string>
     <string name="level">Level:</string>
+    <string name="level1">Level 1</string>
     <string name="textcontinue">Continue</string>
 </resources>
