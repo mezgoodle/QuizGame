@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -111,6 +112,25 @@ public class Level1 extends AppCompatActivity {
         }
         img_right.setImageResource(array.images1[numRight]);
         text_right.setText(array.texts1[numRight]);
+
+        // Listen clicking on left image
+        img_left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Touch image
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    img_right.setEnabled(false); // Block right picture
+                    if (numLeft > numRight) {
+                        img_left.setImageResource(R.drawable.img_true);
+                    } else {
+                        img_left.setImageResource(R.drawable.img_false);
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                }
+                return true;
+            }
+        });
     }
 
     // System button back
