@@ -14,9 +14,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
+    public int numLeft;
+    public int numRight;
+    Array array = new Array();
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,9 @@ public class Level1 extends AppCompatActivity {
         final ImageView img_right = (ImageView)findViewById(R.id.img_right);
         // Create round corners for right image
         img_right.setClipToOutline(true);
+
+        final TextView text_left = findViewById(R.id.text_left);
+        final TextView text_right = findViewById(R.id.text_right);
 
         // Show game on fullscreen
         Window w = getWindow();
@@ -83,6 +92,19 @@ public class Level1 extends AppCompatActivity {
                 }
             }
         });
+
+        // Left picture
+        numLeft = random.nextInt(10);               // Random int
+        img_left.setImageResource(array.images1[numLeft]); // Get image from array
+        text_left.setText(array.texts1[numLeft]);          // Get text from array
+
+        // Right picture
+        numRight = random.nextInt(10);
+        while (numLeft == numRight) {
+            numRight = random.nextInt(10);
+        }
+        img_right.setImageResource(array.images1[numRight]);
+        text_right.setText(array.texts1[numRight]);
     }
 
     // System button back
