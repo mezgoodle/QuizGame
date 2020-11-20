@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ public class Level1 extends AppCompatActivity {
     public int numRight;
     Array array = new Array();
     Random random = new Random();
+    public int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +95,9 @@ public class Level1 extends AppCompatActivity {
                 }
             }
         });
+
+        // Connect animation
+        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
 
         // Left picture
         numLeft = random.nextInt(10);               // Random int
