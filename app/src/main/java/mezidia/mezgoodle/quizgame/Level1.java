@@ -192,6 +192,77 @@ public class Level1 extends AppCompatActivity {
                 return true;
             }
         });
+
+        // Listen clicking on right image
+        img_right.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Touch image
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    img_left.setEnabled(false); // Block left picture
+                    if (numLeft < numRight) {
+                        img_right.setImageResource(R.drawable.img_true);
+                    } else {
+                        img_right.setImageResource(R.drawable.img_false);
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (numLeft < numRight) {
+                        if (count < full_points) {
+                            count +=1;
+                        }
+
+                        // Fill progress
+                        for (int i = 0; i < full_points; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i = 0; i < count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    } else {
+                        if (count > 0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -= 2;
+                            }
+                        }
+                        // Fill progress
+                        for (int i = 0; i < full_points - 1; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i = 0; i < count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if (count == full_points) {
+                        // Exit from level
+                    } else {
+                        numLeft = random.nextInt(10);               // Random int
+                        img_left.setImageResource(array.images1[numLeft]); // Get image from array
+                        img_left.startAnimation(a);
+                        text_left.setText(array.texts1[numLeft]);          // Get text from array
+
+                        // Right picture
+                        numRight = random.nextInt(10);
+                        while (numLeft == numRight) {
+                            numRight = random.nextInt(10);
+                        }
+                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.startAnimation(a);
+                        text_right.setText(array.texts1[numRight]);
+
+                        img_left.setEnabled(true);
+                    }
+                }
+                return true;
+            }
+        });
     }
 
     // System button back
