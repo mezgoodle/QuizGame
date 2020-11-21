@@ -91,6 +91,8 @@ public class Level1 extends AppCompatActivity {
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
         dialogEnd.setContentView(R.layout.dialogend); // path to layout of dialog window
         dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
 
         // Button for closing dialog window
