@@ -18,11 +18,11 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/btnclose"
-            android:text="X"
+            android:text="&#60;"
             android:textStyle="bold"
             android:gravity="center"
             android:background="@drawable/button_stroke_black95_press_white"
-            android:layout_gravity="end" />
+            android:layout_gravity="start" />
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
