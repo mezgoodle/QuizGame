@@ -27,6 +27,7 @@ public class Level1 extends AppCompatActivity {
     Array array = new Array();
     Random random = new Random();
     public int count = 0;
+    final static int full_points = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,12 +136,12 @@ public class Level1 extends AppCompatActivity {
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft > numRight) {
-                        if (count < 20) {
+                        if (count < full_points) {
                             count +=1;
                         }
 
                         // Fill progress
-                        for (int i = 0; i < 20; i++) {
+                        for (int i = 0; i < full_points; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points);
                         }
@@ -150,7 +151,42 @@ public class Level1 extends AppCompatActivity {
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
                     } else {
+                        if (count > 0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -= 2;
+                            }
+                        }
+                        // Fill progress
+                        for (int i = 0; i < full_points - 1; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
 
+                        for (int i = 0; i < count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if (count == full_points) {
+                        // Exit from level
+                    } else {
+                        numLeft = random.nextInt(10);               // Random int
+                        img_left.setImageResource(array.images1[numLeft]); // Get image from array
+                        img_left.startAnimation(a);
+                        text_left.setText(array.texts1[numLeft]);          // Get text from array
+
+                        // Right picture
+                        numRight = random.nextInt(10);
+                        while (numLeft == numRight) {
+                            numRight = random.nextInt(10);
+                        }
+                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.startAnimation(a);
+                        text_right.setText(array.texts1[numRight]);
+
+                        img_right.setEnabled(true);
                     }
                 }
                 return true;
