@@ -58,6 +58,10 @@ public class Level2 extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
         dialog.setCancelable(false); // cant close window with back button
 
+        // Insert image in dialog window
+        ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
+        previewimg.setImageResource(R.drawable.previewimgtwo);
+
         // Button for closing dialog window
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
         btnclose.setOnClickListener(new View.OnClickListener() {
