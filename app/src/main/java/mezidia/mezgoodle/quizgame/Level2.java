@@ -62,6 +62,10 @@ public class Level2 extends AppCompatActivity {
         ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
         previewimg.setImageResource(R.drawable.previewimgtwo);
 
+        // Set description
+        TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
+        textdescription.setText(R.string.leveltwo);
+
         // Button for closing dialog window
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
         btnclose.setOnClickListener(new View.OnClickListener() {
