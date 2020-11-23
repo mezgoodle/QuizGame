@@ -26,8 +26,7 @@
         
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="90"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="match_parent"
@@ -41,10 +40,9 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="40dp"
             android:id="@+id/btncontinue"
             android:background="@drawable/button_stroke_black95_press_white"
-            android:layout_weight="10"
             android:text="@string/textcontinue"
             android:textColor="@color/white"
             android:paddingLeft="10dp"
