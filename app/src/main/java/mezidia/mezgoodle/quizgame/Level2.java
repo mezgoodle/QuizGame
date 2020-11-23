@@ -22,6 +22,7 @@ import java.util.Random;
 public class Level2 extends AppCompatActivity {
 
     Dialog dialog;
+    Dialog dialogEnd;
     public int numLeft;
     public int numRight;
     Array array = new Array();
@@ -91,6 +92,48 @@ public class Level2 extends AppCompatActivity {
         });
 
         dialog.show(); // show dialog window
+
+        //_______________________________
+        // Call dialog window on the end of game
+        dialogEnd = new Dialog(this); // create new dialog window
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
+        dialogEnd.setContentView(R.layout.dialogend); // path to layout of dialog window
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        dialogEnd.setCancelable(false); // cant close window with back button
+
+        TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
+        textdescriptionEnd.setText(R.string.leveltwoEnd);
+        // Button for closing dialog window
+        TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
+        btnclose1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    startActivity(intent);finish();
+                } catch (Exception e) {
+                    // Empty
+                }
+                dialogEnd.dismiss(); // Close dialog window
+            }
+        });
+
+        // Button for continue the activity
+        Button btncontinue1 = (Button)dialogEnd.findViewById(R.id.btncontinue);
+        btncontinue1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level2.this, Level2.class);
+                    startActivity(intent);finish();
+                } catch (Exception e) {
+                    // Empty
+                }
+                dialogEnd.dismiss();
+            }
+        });
 
         // Button Back
         Button btn_back = (Button)findViewById(R.id.button_back_level);
@@ -179,6 +222,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
                         img_left.setImageResource(array.images2[numLeft]); // Get image from array
@@ -250,6 +294,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
                         img_left.setImageResource(array.images2[numLeft]); // Get image from array
