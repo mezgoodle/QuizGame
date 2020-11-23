@@ -119,16 +119,16 @@ public class Level2 extends AppCompatActivity {
 
         // Left picture
         numLeft = random.nextInt(10);               // Random int
-        img_left.setImageResource(array.images1[numLeft]); // Get image from array
-        text_left.setText(array.texts1[numLeft]);          // Get text from array
+        img_left.setImageResource(array.images2[numLeft]); // Get image from array
+        text_left.setText(array.texts2[numLeft]);          // Get text from array
 
         // Right picture
         numRight = random.nextInt(10);
         while (numLeft == numRight) {
             numRight = random.nextInt(10);
         }
-        img_right.setImageResource(array.images1[numRight]);
-        text_right.setText(array.texts1[numRight]);
+        img_right.setImageResource(array.images2[numRight]);
+        text_right.setText(array.texts2[numRight]);
 
         // Listen clicking on left image
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -181,18 +181,18 @@ public class Level2 extends AppCompatActivity {
                         // Exit from level
                     } else {
                         numLeft = random.nextInt(10);               // Random int
-                        img_left.setImageResource(array.images1[numLeft]); // Get image from array
+                        img_left.setImageResource(array.images2[numLeft]); // Get image from array
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);          // Get text from array
+                        text_left.setText(array.texts2[numLeft]);          // Get text from array
 
                         // Right picture
                         numRight = random.nextInt(10);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(10);
                         }
-                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.setImageResource(array.images2[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]);
+                        text_right.setText(array.texts2[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -252,18 +252,18 @@ public class Level2 extends AppCompatActivity {
                         // Exit from level
                     } else {
                         numLeft = random.nextInt(10);               // Random int
-                        img_left.setImageResource(array.images1[numLeft]); // Get image from array
+                        img_left.setImageResource(array.images2[numLeft]); // Get image from array
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);          // Get text from array
+                        text_left.setText(array.texts2[numLeft]);          // Get text from array
 
                         // Right picture
                         numRight = random.nextInt(10);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(10);
                         }
-                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.setImageResource(array.images2[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]);
+                        text_right.setText(array.texts2[numRight]);
 
                         img_left.setEnabled(true);
                     }
