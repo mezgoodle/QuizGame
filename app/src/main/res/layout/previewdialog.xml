@@ -41,14 +41,15 @@
             android:layout_marginTop="10dp"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:id="@+id/btncontinue"
             android:background="@drawable/button_stroke_black95_press_white"
             android:layout_weight="10"
             android:text="@string/textcontinue"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:paddingTop="0dp"
             android:textAllCaps="true"
             android:textSize="22sp"
             android:layout_marginTop="10dp"

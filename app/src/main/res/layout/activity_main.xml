@@ -29,7 +29,7 @@
     <LinearLayout
         android:id="@+id/startLayout"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:padding="9dp"
@@ -44,7 +44,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="@string/start"
-            android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="25sp" />
     </LinearLayout>
 </RelativeLayout>
