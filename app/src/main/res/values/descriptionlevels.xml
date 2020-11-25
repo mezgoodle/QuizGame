@@ -6,4 +6,5 @@
     <string name="leveltwo">Take a bigger roman number.\nQuestions can repeat until you take 20 points</string>
     <string name="leveltwoEnd">"Congratulation, level complete!\n
         Do you know, that the Roman numeral does not exist?"</string>
+    <string name="levelthree">Which of the animals shows the tongue more?</string>
 </resources>
