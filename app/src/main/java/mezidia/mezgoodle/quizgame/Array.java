@@ -54,4 +54,28 @@ public class Array {
             R.string.lvl2text9,
             R.string.lvl2text10,
     };
+
+    // Array for the third level
+    final int[] images3 = {
+            R.drawable.three_level1, R.drawable.three_level2, R.drawable.three_level3,
+            R.drawable.three_level4, R.drawable.three_level5, R.drawable.three_level6,
+            R.drawable.three_level7, R.drawable.three_level8, R.drawable.three_level9,
+            R.drawable.three_level10, R.drawable.three_level11, R.drawable.three_level12,
+            R.drawable.three_level13, R.drawable.three_level14, R.drawable.three_level15,
+            R.drawable.three_level16, R.drawable.three_level17, R.drawable.three_level18,
+            R.drawable.three_level19, R.drawable.three_level20, R.drawable.three_level21,
+    };
+
+    final int[] texts3 = {
+            R.string.lvl2text1,
+            R.string.lvl2text2,
+            R.string.lvl2text3,
+            R.string.lvl2text4,
+            R.string.lvl2text5,
+            R.string.lvl2text6,
+            R.string.lvl2text7,
+            R.string.lvl2text8,
+            R.string.lvl2text9,
+            R.string.lvl2text10,
+    };
 }
