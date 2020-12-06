@@ -67,15 +67,12 @@ public class Array {
     };
 
     final int[] texts3 = {
-            R.string.lvl2text1,
-            R.string.lvl2text2,
-            R.string.lvl2text3,
-            R.string.lvl2text4,
-            R.string.lvl2text5,
-            R.string.lvl2text6,
-            R.string.lvl2text7,
-            R.string.lvl2text8,
-            R.string.lvl2text9,
-            R.string.lvl2text10,
+            R.string.lvl3text1, R.string.lvl3text2, R.string.lvl2text3,
+            R.string.lvl3text4, R.string.lvl3text5, R.string.lvl3text6,
+            R.string.lvl3text7, R.string.lvl3text8, R.string.lvl3text9,
+            R.string.lvl3text10, R.string.lvl3text11, R.string.lvl3text12,
+            R.string.lvl3text13, R.string.lvl3text14, R.string.lvl3text15,
+            R.string.lvl3text16, R.string.lvl3text17, R.string.lvl3text18,
+            R.string.lvl3text19, R.string.lvl3text20, R.string.lvl3text21,
     };
 }
