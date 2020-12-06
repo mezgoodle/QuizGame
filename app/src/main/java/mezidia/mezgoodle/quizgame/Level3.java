@@ -1,5 +1,6 @@
 package mezidia.mezgoodle.quizgame;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -31,13 +32,14 @@ public class Level3 extends AppCompatActivity {
     public int count = 0;
     final static int full_points = 20;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1);
+        text_levels.setText(R.string.level3);
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
         // Create round corners for left image
@@ -47,7 +49,9 @@ public class Level3 extends AppCompatActivity {
         img_right.setClipToOutline(true);
 
         final TextView text_left = findViewById(R.id.text_left);
+        text_left.setTextColor(R.color.black95);
         final TextView text_right = findViewById(R.id.text_right);
+        text_left.setTextColor(R.color.black95);
 
         // Show game on fullscreen
         Window w = getWindow();
