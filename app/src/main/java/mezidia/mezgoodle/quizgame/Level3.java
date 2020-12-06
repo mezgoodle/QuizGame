@@ -53,6 +53,10 @@ public class Level3 extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
+        // Set background image for dialog window
+        ImageView background = (ImageView)findViewById(R.id.background);
+        background.setImageResource(R.drawable.level3);
+
         // Call dialog window on the start of game
         dialog = new Dialog(this); // create new dialog window
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
@@ -166,17 +170,17 @@ public class Level3 extends AppCompatActivity {
         final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
 
         // Left picture
-        numLeft = random.nextInt(10);               // Random int
-        img_left.setImageResource(array.images2[numLeft]); // Get image from array
-        text_left.setText(array.texts2[numLeft]);          // Get text from array
+        numLeft = random.nextInt(21);               // Random int
+        img_left.setImageResource(array.images3[numLeft]); // Get image from array
+        text_left.setText(array.texts3[numLeft]);          // Get text from array
 
         // Right picture
-        numRight = random.nextInt(10);
+        numRight = random.nextInt(21);
         while (numLeft == numRight) {
-            numRight = random.nextInt(10);
+            numRight = random.nextInt(21);
         }
-        img_right.setImageResource(array.images2[numRight]);
-        text_right.setText(array.texts2[numRight]);
+        img_right.setImageResource(array.images3[numRight]);
+        text_right.setText(array.texts3[numRight]);
 
         // Listen clicking on left image
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -229,19 +233,19 @@ public class Level3 extends AppCompatActivity {
                         // Exit from level
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
-                        img_left.setImageResource(array.images2[numLeft]); // Get image from array
+                        numLeft = random.nextInt(21);               // Random int
+                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts2[numLeft]);          // Get text from array
+                        text_left.setText(array.texts3[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(21);
                         while (numLeft == numRight) {
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(21);
                         }
-                        img_right.setImageResource(array.images2[numRight]);
+                        img_right.setImageResource(array.images3[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts2[numRight]);
+                        text_right.setText(array.texts3[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -301,19 +305,19 @@ public class Level3 extends AppCompatActivity {
                         // Exit from level
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
-                        img_left.setImageResource(array.images2[numLeft]); // Get image from array
+                        numLeft = random.nextInt(21);               // Random int
+                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts2[numLeft]);          // Get text from array
+                        text_left.setText(array.texts3[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(21);
                         while (numLeft == numRight) {
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(21);
                         }
-                        img_right.setImageResource(array.images2[numRight]);
+                        img_right.setImageResource(array.images3[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts2[numRight]);
+                        text_right.setText(array.texts3[numRight]);
 
                         img_left.setEnabled(true);
                     }
