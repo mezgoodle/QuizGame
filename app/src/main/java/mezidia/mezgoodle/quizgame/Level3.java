@@ -115,6 +115,9 @@ public class Level3 extends AppCompatActivity {
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
+        // Set background image
+        LinearLayout dialogBackgroundEnd = (LinearLayout)dialogEnd.findViewById(R.id.dialogbackground);
+        dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundthree);
 
         TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
         textdescriptionEnd.setText(R.string.leveltwoEnd);
