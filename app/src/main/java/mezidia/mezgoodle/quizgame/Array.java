@@ -67,7 +67,7 @@ public class Array {
     };
 
     final int[] texts3 = {
-            R.string.lvl3text1, R.string.lvl3text2, R.string.lvl2text3,
+            R.string.lvl3text1, R.string.lvl3text2, R.string.lvl3text3,
             R.string.lvl3text4, R.string.lvl3text5, R.string.lvl3text6,
             R.string.lvl3text7, R.string.lvl3text8, R.string.lvl3text9,
             R.string.lvl3text10, R.string.lvl3text11, R.string.lvl3text12,

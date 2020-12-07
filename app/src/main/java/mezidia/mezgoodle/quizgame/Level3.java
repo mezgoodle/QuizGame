@@ -51,7 +51,7 @@ public class Level3 extends AppCompatActivity {
         final TextView text_left = findViewById(R.id.text_left);
         text_left.setTextColor(R.color.black95);
         final TextView text_right = findViewById(R.id.text_right);
-        text_left.setTextColor(R.color.black95);
+        text_right.setTextColor(R.color.black95);
 
         // Show game on fullscreen
         Window w = getWindow();
