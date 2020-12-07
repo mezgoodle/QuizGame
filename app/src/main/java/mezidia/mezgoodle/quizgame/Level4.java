@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -86,7 +86,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);finish();
                 } catch (Exception e) {
                     // Empty
@@ -127,7 +127,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);finish();
                 } catch (Exception e) {
                     // Empty
@@ -142,7 +142,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, Level4.class);
                     startActivity(intent);finish();
                 } catch (Exception e) {
                     // Empty
@@ -157,7 +157,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);finish();
                 } catch (Exception e) {
                     // Empty
@@ -174,7 +174,7 @@ public class Level3 extends AppCompatActivity {
         };
 
         // Connect animation
-        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
         // Left picture
         numLeft = random.nextInt(21);               // Random int
@@ -338,7 +338,7 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);finish();
         } catch (Exception e) {
             // Empty
