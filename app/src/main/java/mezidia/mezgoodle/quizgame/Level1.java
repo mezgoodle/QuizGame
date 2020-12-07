@@ -219,7 +219,7 @@ public class Level1 extends AppCompatActivity {
                     if (count == full_points) {
                         // Exit from level
                         final long secondTime = stopwatch.GetTime();
-                        timerdescriptionEnd.setText(Long.toString(secondTime - firstTime));
+                        timerdescriptionEnd.setText("Time: " + Long.toString(secondTime - firstTime) + " seconds.");
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
