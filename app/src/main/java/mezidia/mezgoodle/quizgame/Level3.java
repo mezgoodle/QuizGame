@@ -120,7 +120,7 @@ public class Level3 extends AppCompatActivity {
         dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundthree);
 
         TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
-        textdescriptionEnd.setText(R.string.leveltwoEnd);
+        textdescriptionEnd.setText(R.string.levelthreeEnd);
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
         btnclose1.setOnClickListener(new View.OnClickListener() {
