@@ -99,7 +99,7 @@ public class Level1 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
 
-        TextView timerdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
+        TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
@@ -219,7 +219,7 @@ public class Level1 extends AppCompatActivity {
                     if (count == full_points) {
                         // Exit from level
                         final long secondTime = stopwatch.GetTime();
-                        timerdescriptionEnd.setText("Time: " + Long.toString(secondTime - firstTime) + " seconds.");
+                        timerDescriptionEnd.setText("Time: " + Long.toString(secondTime - firstTime) + " seconds.");
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
