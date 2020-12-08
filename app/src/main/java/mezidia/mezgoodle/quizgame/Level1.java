@@ -37,7 +37,7 @@ public class Level1 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         // Get time on the start
-        final long firstTime = stopwatch.GetTime();
+        final long startTime = stopwatch.GetTime();
 
         TextView text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level1);
@@ -218,8 +218,11 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
-                        final long secondTime = stopwatch.GetTime();
-                        timerDescriptionEnd.setText("Time: " + Long.toString(secondTime - firstTime) + " seconds.");
+                        final long finishTime = stopwatch.GetTime();
+                        String result = "Your time is ";
+                        result += Long.toString(finishTime - startTime);
+                        result += " seconds";
+                        timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
