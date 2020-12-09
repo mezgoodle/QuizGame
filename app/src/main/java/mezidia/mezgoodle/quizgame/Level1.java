@@ -27,6 +27,7 @@ public class Level1 extends AppCompatActivity {
     public int numRight;
     Array array = new Array();
     Random random = new Random();
+    Stopwatch stopwatch = new Stopwatch();
     public int count = 0;
     final static int full_points = 20;
 
@@ -34,6 +35,9 @@ public class Level1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
+
+        // Get time on the start
+        final long startTime = stopwatch.GetTime();
 
         TextView text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level1);
@@ -94,6 +98,8 @@ public class Level1 extends AppCompatActivity {
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
+
+        TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
@@ -212,6 +218,9 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        final long finishTime = stopwatch.GetTime();
+                        String result = stopwatch.GetResult(finishTime - startTime);
+                        timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
@@ -284,6 +293,9 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        final long finishTime = stopwatch.GetTime();
+                        String result = stopwatch.GetResult(finishTime - startTime);
+                        timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
