@@ -111,7 +111,6 @@ public class Level2 extends AppCompatActivity {
         textdescriptionEnd.setText(R.string.leveltwoEnd);
         TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
-
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
         btnclose1.setOnClickListener(new View.OnClickListener() {
@@ -230,9 +229,7 @@ public class Level2 extends AppCompatActivity {
                     if (count == full_points) {
                         // Exit from level
                         final long finishTime = stopwatch.GetTime();
-                        String result = "Your time is ";
-                        result += Long.toString(finishTime - startTime);
-                        result += " seconds";
+                        String result = stopwatch.GetResult(finishTime - startTime);
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
@@ -306,6 +303,9 @@ public class Level2 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        final long finishTime = stopwatch.GetTime();
+                        String result = stopwatch.GetResult(finishTime - startTime);
+                        timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int

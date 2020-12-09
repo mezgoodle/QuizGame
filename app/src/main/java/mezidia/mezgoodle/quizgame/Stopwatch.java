@@ -16,6 +16,6 @@ public class Stopwatch {
         int seconds = (int) (time - this.seconds * minutes);
         if (minutes == 0) {
             return String.format("Your time is %d seconds", time);
-        } else return String.format("Your time is %d minutes and %d seconds.", minutes, seconds);
+        } else return String.format("Your time is %d minute(s) and %d seconds.", minutes, seconds);
     }
 }

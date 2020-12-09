@@ -293,6 +293,9 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == full_points) {
                         // Exit from level
+                        final long finishTime = stopwatch.GetTime();
+                        String result = stopwatch.GetResult(finishTime - startTime);
+                        timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);               // Random int
