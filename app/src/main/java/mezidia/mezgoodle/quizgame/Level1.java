@@ -219,9 +219,7 @@ public class Level1 extends AppCompatActivity {
                     if (count == full_points) {
                         // Exit from level
                         final long finishTime = stopwatch.GetTime();
-                        String result = "Your time is ";
-                        result += Long.toString(finishTime - startTime);
-                        result += " seconds";
+                        String result = stopwatch.GetResult(finishTime - startTime);
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
