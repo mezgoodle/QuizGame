@@ -74,15 +74,15 @@ public class Level4 extends AppCompatActivity {
 
         // Insert image in dialog window
         ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
-        previewimg.setImageResource(R.drawable.previewimgthree);
+        previewimg.setImageResource(R.drawable.previewimgfour);
 
         // Set background for dialog window
         LinearLayout dialogBackground = (LinearLayout)dialog.findViewById(R.id.dialogbackground);
-        dialogBackground.setBackgroundResource(R.drawable.previewbackgroundthree);
+        dialogBackground.setBackgroundResource(R.drawable.previewbackgroundfour);
 
         // Set description
         TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.levelthree);
+        textdescription.setText(R.string.levelfour);
 
         // Button for closing dialog window
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);

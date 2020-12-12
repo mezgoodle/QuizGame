@@ -78,6 +78,20 @@ public class GameLevels extends AppCompatActivity {
                 }
             }
         });
+
+        // Button for step on level4
+        TextView textView4 = (TextView)findViewById(R.id.textView4);
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level4.class);
+                    startActivity(intent);finish();
+                } catch (Exception e) {
+                    // Empty
+                }
+            }
+        });
     }
     // System button "Back"
     @Override
