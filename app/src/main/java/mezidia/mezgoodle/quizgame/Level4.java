@@ -183,17 +183,17 @@ public class Level4 extends AppCompatActivity {
         final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
         // Left picture
-        numLeft = random.nextInt(21);               // Random int
-        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-        text_left.setText(array.texts3[numLeft]);          // Get text from array
+        numLeft = random.nextInt(20);               // Random int
+        img_left.setImageResource(array.images4[numLeft]); // Get image from array
+        text_left.setText(array.texts4[numLeft]);          // Get text from array
 
         // Right picture
-        numRight = random.nextInt(21);
-        while (numLeft == numRight) {
-            numRight = random.nextInt(21);
+        numRight = random.nextInt(20);
+        while (array.strong4[numLeft] == array.strong4[numRight]) {
+            numRight = random.nextInt(20);
         }
-        img_right.setImageResource(array.images3[numRight]);
-        text_right.setText(array.texts3[numRight]);
+        img_right.setImageResource(array.images4[numRight]);
+        text_right.setText(array.texts4[numRight]);
 
         // Listen clicking on left image
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -202,13 +202,13 @@ public class Level4 extends AppCompatActivity {
                 // Touch image
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     img_right.setEnabled(false); // Block right picture
-                    if (numLeft > numRight) {
+                    if (array.strong4[numLeft] > array.strong4[numRight]) {
                         img_left.setImageResource(R.drawable.img_true);
                     } else {
                         img_left.setImageResource(R.drawable.img_false);
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    if (numLeft > numRight) {
+                    if (array.strong4[numLeft] > array.strong4[numRight]) {
                         if (count < full_points) {
                             count +=1;
                         }
@@ -249,19 +249,18 @@ public class Level4 extends AppCompatActivity {
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(21);               // Random int
-                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);          // Get text from array
+                        // Left picture
+                        numLeft = random.nextInt(20);               // Random int
+                        img_left.setImageResource(array.images4[numLeft]); // Get image from array
+                        text_left.setText(array.texts4[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(21);
-                        while (numLeft == numRight) {
-                            numRight = random.nextInt(21);
+                        numRight = random.nextInt(20);
+                        while (array.strong4[numLeft] == array.strong4[numRight]) {
+                            numRight = random.nextInt(20);
                         }
-                        img_right.setImageResource(array.images3[numRight]);
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);
+                        img_right.setImageResource(array.images4[numRight]);
+                        text_right.setText(array.texts4[numRight]);
 
                         img_right.setEnabled(true);
                     }
@@ -277,13 +276,13 @@ public class Level4 extends AppCompatActivity {
                 // Touch image
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     img_left.setEnabled(false); // Block left picture
-                    if (numLeft < numRight) {
+                    if (array.strong4[numLeft] < array.strong4[numRight]) {
                         img_right.setImageResource(R.drawable.img_true);
                     } else {
                         img_right.setImageResource(R.drawable.img_false);
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    if (numLeft < numRight) {
+                    if (array.strong4[numLeft] < array.strong4[numRight]) {
                         if (count < full_points) {
                             count +=1;
                         }
@@ -324,19 +323,18 @@ public class Level4 extends AppCompatActivity {
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(21);               // Random int
-                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);          // Get text from array
+                        // Left picture
+                        numLeft = random.nextInt(20);               // Random int
+                        img_left.setImageResource(array.images4[numLeft]); // Get image from array
+                        text_left.setText(array.texts4[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(21);
-                        while (numLeft == numRight) {
-                            numRight = random.nextInt(21);
+                        numRight = random.nextInt(20);
+                        while (array.strong4[numLeft] == array.strong4[numRight]) {
+                            numRight = random.nextInt(20);
                         }
-                        img_right.setImageResource(array.images3[numRight]);
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);
+                        img_right.setImageResource(array.images4[numRight]);
+                        text_right.setText(array.texts4[numRight]);
 
                         img_left.setEnabled(true);
                     }
