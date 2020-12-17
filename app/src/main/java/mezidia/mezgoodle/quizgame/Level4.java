@@ -56,7 +56,7 @@ public class Level4 extends AppCompatActivity {
         final TextView text_left = findViewById(R.id.text_left);
         text_left.setTextColor(R.color.black95);
         final TextView text_right = findViewById(R.id.text_right);
-        text_left.setTextColor(R.color.black95);
+        text_right.setTextColor(R.color.black95);
 
         // Show game on fullscreen
         Window w = getWindow();
@@ -248,15 +248,6 @@ public class Level4 extends AppCompatActivity {
                         final long finishTime = stopwatch.GetTime();
                         String result = stopwatch.GetResult(finishTime - startTime);
                         timerDescriptionEnd.setText(result);
-                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-                        final int level = save.getInt("Level", 1);
-                        if (level > 4) {
-                            // empty
-                        } else {
-                            SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Level", 5);
-                            editor.commit();
-                        }
                         dialogEnd.show();
                     } else {
                         // Left picture
@@ -331,15 +322,6 @@ public class Level4 extends AppCompatActivity {
                         final long finishTime = stopwatch.GetTime();
                         String result = stopwatch.GetResult(finishTime - startTime);
                         timerDescriptionEnd.setText(result);
-                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-                        final int level = save.getInt("Level", 1);
-                        if (level > 4) {
-                            // empty
-                        } else {
-                            SharedPreferences.Editor editor = save.edit();
-                            editor.putInt("Level", 5);
-                            editor.commit();
-                        }
                         dialogEnd.show();
                     } else {
                         // Left picture
