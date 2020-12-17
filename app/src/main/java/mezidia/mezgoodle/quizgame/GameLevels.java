@@ -47,7 +47,7 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if (level <= 1) {
+                    if (level >= 1) {
                         Intent intent = new Intent(GameLevels.this, Level1.class);
                         startActivity(intent);
                         finish();
@@ -64,7 +64,7 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if (level <= 2) {
+                    if (level >= 2) {
                         Intent intent = new Intent(GameLevels.this, Level2.class);
                         startActivity(intent);
                         finish();
@@ -81,7 +81,7 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if (level <= 3) {
+                    if (level >= 3) {
                         Intent intent = new Intent(GameLevels.this, Level3.class);
                         startActivity(intent);
                         finish();
@@ -98,7 +98,7 @@ public class GameLevels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if (level <= 4) {
+                    if (level >= 4) {
                         Intent intent = new Intent(GameLevels.this, Level4.class);
                         startActivity(intent);
                         finish();
