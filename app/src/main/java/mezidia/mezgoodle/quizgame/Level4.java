@@ -63,7 +63,7 @@ public class Level4 extends AppCompatActivity {
 
         // Set background image for dialog window
         ImageView background = (ImageView)findViewById(R.id.background);
-        background.setImageResource(R.drawable.level3);
+        background.setImageResource(R.drawable.level4);
 
         // Call dialog window on the start of game
         dialog = new Dialog(this); // create new dialog window
@@ -121,10 +121,10 @@ public class Level4 extends AppCompatActivity {
         dialogEnd.setCancelable(false); // cant close window with back button
         // Set background image
         LinearLayout dialogBackgroundEnd = (LinearLayout)dialogEnd.findViewById(R.id.dialogbackground);
-        dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundthree);
+        dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundfour);
 
         TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
-        textdescriptionEnd.setText(R.string.levelthreeEnd);
+        textdescriptionEnd.setText(R.string.levelfourEnd);
         TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
         // Button for closing dialog window

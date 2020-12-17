@@ -10,4 +10,6 @@
     <string name="levelthreeEnd">"Congratulation, level complete!\n
         Do you know that the Burj Khalifa will not be the highest soon?"</string>
     <string name="levelfour">Сhoose an edible item</string>
+    <string name="levelfourEnd">"Congratulation, level complete!\n
+        It is known that many crocodiles eat stones. But not because they are edible. They eat them in order to immerse themselves in the water faster"</string>
 </resources>
