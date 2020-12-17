@@ -43,7 +43,7 @@ public class Level4 extends AppCompatActivity {
         final long startTime = stopwatch.GetTime();
 
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level3);
+        text_levels.setText(R.string.level4);
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
         // Create round corners for left image
