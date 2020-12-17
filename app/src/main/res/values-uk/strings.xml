@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">QuizGame</string>
-    <string name="start">Start</string>
-    <string name="back">Back</string>
-    <string name="level">Level:</string>
-    <string name="level1">Level 1</string>
-    <string name="level2">Level 2</string>
-    <string name="level3">Level 3</string>
-    <string name="level4">Level 4</string>
-    <string name="textcontinue">Continue</string>
+    <string name="start">Почати</string>
+    <string name="back">Назад</string>
+    <string name="level">Рівень:</string>
+    <string name="level1">Рівень 1</string>
+    <string name="level2">Рівень 2</string>
+    <string name="level3">Рівень 3</string>
+    <string name="level4">Рівень 4</string>
+    <string name="textcontinue">Продовжити</string>
 </resources>
