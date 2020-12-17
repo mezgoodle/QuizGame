@@ -75,4 +75,33 @@ public class Array {
             R.string.lvl3text16, R.string.lvl3text17, R.string.lvl3text18,
             R.string.lvl3text19, R.string.lvl3text20, R.string.lvl3text21,
     };
+
+    // Array for the fourth level
+    final int[] images4 = {
+            R.drawable.edible1, R.drawable.inedible1,
+            R.drawable.edible2, R.drawable.inedible2,
+            R.drawable.edible3, R.drawable.inedible3,
+            R.drawable.edible4, R.drawable.inedible4,
+            R.drawable.edible5, R.drawable.inedible5,
+            R.drawable.edible6, R.drawable.inedible6,
+            R.drawable.edible7, R.drawable.inedible7,
+            R.drawable.edible8, R.drawable.inedible8,
+            R.drawable.edible9, R.drawable.inedible9,
+            R.drawable.edible10, R.drawable.inedible10,
+    };
+
+    final int[] texts4 = {
+            R.string.lvl4text1, R.string.lvl4text2, R.string.lvl4text3,
+            R.string.lvl4text4, R.string.lvl4text5, R.string.lvl4text6,
+            R.string.lvl4text7, R.string.lvl4text8, R.string.lvl4text9,
+            R.string.lvl4text10, R.string.lvl4text11, R.string.lvl4text12,
+            R.string.lvl4text13, R.string.lvl4text14, R.string.lvl4text15,
+            R.string.lvl4text16, R.string.lvl4text17, R.string.lvl4text18,
+            R.string.lvl4text19, R.string.lvl4text20,
+    };
+
+    final int[] strong4 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+    };
 }
