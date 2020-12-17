@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="levelone">Take a bigger number.\nQuestions can repeat until you take 20 points</string>
+    <string name="leveloneEnd">"Congratulation, level complete!\n
+        Do you know, that number seven is the luckiest? There 7 days in week, 7 continents, 7 colors in rainbow, 7 music notes and etc."</string>
+    <string name="leveltwo">Take a bigger roman number.\nQuestions can repeat until you take 20 points</string>
+    <string name="leveltwoEnd">"Congratulation, level complete!\n
+        Do you know, that the Roman numeral does not exist?"</string>
+    <string name="levelthree">Take a higher building</string>
+    <string name="levelthreeEnd">"Congratulation, level complete!\n
+        Do you know that the Burj Khalifa will not be the highest soon?"</string>
+    <string name="levelfour">Сhoose an edible item</string>
+    <string name="levelfourEnd">"Congratulation, level complete!\n
+        It is known that many crocodiles eat stones. But not because they are edible. They eat them in order to immerse themselves in the water faster"</string>
+</resources>

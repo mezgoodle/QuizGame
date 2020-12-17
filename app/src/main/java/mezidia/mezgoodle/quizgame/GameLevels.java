@@ -1,4 +1,4 @@
-package mezidia.mezgoodle.quizgame;
+ package mezidia.mezgoodle.quizgame;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

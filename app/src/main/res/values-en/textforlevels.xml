@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lvl1text0">Zero</string>
+    <string name="lvl1text1">One</string>
+    <string name="lvl1text2">Two</string>
+    <string name="lvl1text3">Three</string>
+    <string name="lvl1text4">Four</string>
+    <string name="lvl1text5">Five</string>
+    <string name="lvl1text6">Six</string>
+    <string name="lvl1text7">Seven</string>
+    <string name="lvl1text8">Eight</string>
+    <string name="lvl1text9">Nine</string>
+
+    <string name="lvl2text1">I</string>
+    <string name="lvl2text2">II</string>
+    <string name="lvl2text3">III</string>
+    <string name="lvl2text4">IV</string>
+    <string name="lvl2text5">V</string>
+    <string name="lvl2text6">VI</string>
+    <string name="lvl2text7">VII</string>
+    <string name="lvl2text8">VIII</string>
+    <string name="lvl2text9">IX</string>
+    <string name="lvl2text10">X</string>
+
+    <string name="lvl3text1">Taj Mahal</string>
+    <string name="lvl3text2">Big Ben</string>
+    <string name="lvl3text3">Notre-Dame de Paris</string>
+    <string name="lvl3text4">Eifel tower</string>
+    <string name="lvl3text5">Empire State building</string>
+    <string name="lvl3text6">International Finance Centre</string>
+    <string name="lvl3text7">Nanjing Greenland Financial Complex</string>
+    <string name="lvl3text8">Petronas Tower</string>
+    <string name="lvl3text9">Oriental Pearl Tower</string>
+    <string name="lvl3text10">Willis Tower</string>
+    <string name="lvl3text11">Shanghai World Finance Centre</string>
+    <string name="lvl3text12">Taipei 101</string>
+    <string name="lvl3text13">Ostankino Tower</string>
+    <string name="lvl3text14">CN Tower</string>
+    <string name="lvl3text15">Makhal Royal Clock Tower</string>
+    <string name="lvl3text16">Tokyo Skytree</string>
+    <string name="lvl3text17">Russia Tower</string>
+    <string name="lvl3text18">Chicago Spire</string>
+    <string name="lvl3text19">Incheon Towers</string>
+    <string name="lvl3text20">Shanghai centre</string>
+    <string name="lvl3text21">Burj Dubai</string>
+
+    <string name="lvl4text1">Taj Mahal</string>
+    <string name="lvl4text2">Big Ben</string>
+    <string name="lvl4text3">Notre-Dame de Paris</string>
+    <string name="lvl4text4">Eifel tower</string>
+    <string name="lvl4text5">Empire State building</string>
+    <string name="lvl4text6">International Finance Centre</string>
+    <string name="lvl4text7">Nanjing Greenland Financial Complex</string>
+    <string name="lvl4text8">Petronas Tower</string>
+    <string name="lvl4text9">Oriental Pearl Tower</string>
+    <string name="lvl4text10">Willis Tower</string>
+    <string name="lvl4text11">Shanghai World Finance Centre</string>
+    <string name="lvl4text12">Taipei 101</string>
+    <string name="lvl4text13">Ostankino Tower</string>
+    <string name="lvl4text14">CN Tower</string>
+    <string name="lvl4text15">Makhal Royal Clock Tower</string>
+    <string name="lvl4text16">Tokyo Skytree</string>
+    <string name="lvl4text17">Russia Tower</string>
+    <string name="lvl4text18">Chicago Spire</string>
+    <string name="lvl4text19">Incheon Towers</string>
+    <string name="lvl4text20">Shanghai centre</string>
+</resources>
