@@ -22,18 +22,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level4 extends AppCompatActivity {
-
-    Dialog dialog;
-    Dialog dialogEnd;
-    public int numLeft;
-    public int numRight;
-    Array array = new Array();
-    Random random = new Random();
-    Stopwatch stopwatch = new Stopwatch();
-    public int count = 0;
-    final static int full_points = 20;
-
+public class Level4 extends Level {
+    
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
