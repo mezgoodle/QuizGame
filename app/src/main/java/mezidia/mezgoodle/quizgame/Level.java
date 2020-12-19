@@ -1,6 +1,7 @@
 package mezidia.mezgoodle.quizgame;
 
 import android.app.Dialog;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,4 +17,5 @@ public class Level extends AppCompatActivity {
     protected Stopwatch stopwatch = new Stopwatch();
     protected int count = 0;
     protected final static int full_points = 20;
+    protected TextView text_levels;
 }

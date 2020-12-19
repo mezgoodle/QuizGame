@@ -29,8 +29,8 @@ public class Level1 extends Level {
 
         // Get time on the start
         final long startTime = stopwatch.GetTime();
-
-        TextView text_levels = findViewById(R.id.text_levels);
+        
+        text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level1);
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);

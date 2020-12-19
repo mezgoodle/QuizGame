@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class Level4 extends Level {
-    
+
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
