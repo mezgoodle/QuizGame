@@ -77,18 +77,7 @@ public class Level3 extends Level {
 
         // Button for closing dialog window
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
-        btnclose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
-                    startActivity(intent);finish();
-                } catch (Exception e) {
-                    // Empty
-                }
-                dialog.dismiss(); // Close dialog window
-            }
-        });
+        this.setClickTV(btnclose, Level3.this);
 
         // Button for continue the activity
         Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
@@ -120,47 +109,15 @@ public class Level3 extends Level {
 
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
-        btnclose1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
-                    startActivity(intent);finish();
-                } catch (Exception e) {
-                    // Empty
-                }
-                dialogEnd.dismiss(); // Close dialog window
-            }
-        });
+        this.setClickTV(btnclose1, Level3.this);
 
         // Button for continue the activity
         Button btncontinue1 = (Button)dialogEnd.findViewById(R.id.btncontinue);
-        btncontinue1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level3.this, Level4.class);
-                    startActivity(intent);finish();
-                } catch (Exception e) {
-                    // Empty
-                }
-                dialogEnd.dismiss();
-            }
-        });
+        this.setClickBTN(btncontinue1, Level3.this);
 
         // Button Back
         Button btn_back = (Button)findViewById(R.id.button_back_level);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
-                    startActivity(intent);finish();
-                } catch (Exception e) {
-                    // Empty
-                }
-            }
-        });
+        this.setClickBTN(btn_back, Level3.this);
 
         // Array for progress bar
         final int[] progress = {
