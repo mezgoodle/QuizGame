@@ -15,10 +15,18 @@ import java.io.Console;
 
 public class GameLevels extends AppCompatActivity {
 
+    static int level_id = 1;
+
+    static LoadRes loadRes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gamelevels);
+
+        ////////
+        loadRes = new LoadRes();
+        ////////
 
         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
         final int level = save.getInt("Level", 1);
@@ -50,6 +58,8 @@ public class GameLevels extends AppCompatActivity {
                     if (level >= 1) {
                         Intent intent = new Intent(GameLevels.this, Level1.class);
                         startActivity(intent);
+
+                        level_id = 1;
                         finish();
                     }
                 } catch (Exception e) {
