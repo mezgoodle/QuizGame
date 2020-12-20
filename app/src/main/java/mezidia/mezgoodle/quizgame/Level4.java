@@ -117,7 +117,7 @@ public class Level4 extends Level {
 
         // Button Back
         Button btn_back = (Button)findViewById(R.id.button_back_level);
-        this.setClickBTN(btn_back, Level4.this, GameLevels.class;
+        this.setClickBTN(btn_back, Level4.this, GameLevels.class);
 
         // Connect animation
         final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
