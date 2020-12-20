@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class Level3 extends Level {
+    private int count;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -77,7 +78,7 @@ public class Level3 extends Level {
 
         // Button for closing dialog window
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose, Level3.this);
+        this.setClickTV(btnclose, Level3.this, GameLevels.class);
 
         // Button for continue the activity
         Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
@@ -109,23 +110,15 @@ public class Level3 extends Level {
 
         // Button for closing dialog window
         TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose1, Level3.this);
+        this.setClickTV(btnclose1, Level3.this, GameLevels.class);
 
         // Button for continue the activity
         Button btncontinue1 = (Button)dialogEnd.findViewById(R.id.btncontinue);
-        this.setClickBTN(btncontinue1, Level3.this);
+        this.setClickBTN(btncontinue1, Level3.this, Level4.class);
 
         // Button Back
         Button btn_back = (Button)findViewById(R.id.button_back_level);
-        this.setClickBTN(btn_back, Level3.this);
-
-        // Array for progress bar
-        final int[] progress = {
-                R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,
-                R.id.point6, R.id.point7, R.id.point8, R.id.point9, R.id.point10,
-                R.id.point11, R.id.point12, R.id.point13, R.id.point14, R.id.point15,
-                R.id.point16, R.id.point17, R.id.point18, R.id.point19, R.id.point20,
-        };
+        this.setClickBTN(btn_back, Level3.this, GameLevels.class);
 
         // Connect animation
         final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
