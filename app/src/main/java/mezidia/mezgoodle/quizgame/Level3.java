@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,13 +19,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Random;
+import androidx.annotation.RequiresApi;
 
 public class Level3 extends Level {
-    private int count;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +36,10 @@ public class Level3 extends Level {
         TextView text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level3);
 
-        final ImageView img_left = (ImageView)findViewById(R.id.img_left);
+        final ImageView img_left = findViewById(R.id.img_left);
         // Create round corners for left image
         img_left.setClipToOutline(true);
-        final ImageView img_right = (ImageView)findViewById(R.id.img_right);
+        final ImageView img_right = findViewById(R.id.img_right);
         // Create round corners for right image
         img_right.setClipToOutline(true);
 
@@ -54,7 +53,7 @@ public class Level3 extends Level {
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // Set background image for dialog window
-        ImageView background = (ImageView)findViewById(R.id.background);
+        ImageView background = findViewById(R.id.background);
         background.setImageResource(R.drawable.level3);
 
         // Call dialog window on the start of game
@@ -65,29 +64,24 @@ public class Level3 extends Level {
         dialog.setCancelable(false); // cant close window with back button
 
         // Insert image in dialog window
-        ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
+        ImageView previewimg = dialog.findViewById(R.id.previewimg);
         previewimg.setImageResource(R.drawable.previewimgthree);
 
         // Set background for dialog window
-        LinearLayout dialogBackground = (LinearLayout)dialog.findViewById(R.id.dialogbackground);
+        LinearLayout dialogBackground = dialog.findViewById(R.id.dialogbackground);
         dialogBackground.setBackgroundResource(R.drawable.previewbackgroundthree);
 
         // Set description
-        TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
+        TextView textdescription = dialog.findViewById(R.id.textdescription);
         textdescription.setText(R.string.levelthree);
 
         // Button for closing dialog window
-        TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose, Level3.this, GameLevels.class);
+        TextView btnClose = dialog.findViewById(R.id.btnclose);
+        this.setClickTV(btnClose, Level3.this, GameLevels.class);
 
         // Button for continue the activity
-        Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
-        btncontinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
+        Button btnContinue = dialog.findViewById(R.id.btncontinue);
+        btnContinue.setOnClickListener(v -> dialog.dismiss());
 
         dialog.show(); // show dialog window
 
@@ -101,24 +95,24 @@ public class Level3 extends Level {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
         // Set background image
-        LinearLayout dialogBackgroundEnd = (LinearLayout)dialogEnd.findViewById(R.id.dialogbackground);
+        LinearLayout dialogBackgroundEnd = dialogEnd.findViewById(R.id.dialogbackground);
         dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundthree);
 
-        TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
+        TextView textdescriptionEnd = dialogEnd.findViewById(R.id.textdescriptionEnd);
         textdescriptionEnd.setText(R.string.levelthreeEnd);
-        TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
+        TextView timerDescriptionEnd = dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
         // Button for closing dialog window
-        TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose1, Level3.this, GameLevels.class);
+        TextView btnClose1 = dialogEnd.findViewById(R.id.btnclose);
+        this.setClickTV(btnClose1, Level3.this, GameLevels.class);
 
         // Button for continue the activity
-        Button btncontinue1 = (Button)dialogEnd.findViewById(R.id.btncontinue);
-        this.setClickBTN(btncontinue1, Level3.this, Level4.class);
+        Button btnContinue1 = dialogEnd.findViewById(R.id.btncontinue);
+        this.setClickBTN(btnContinue1, Level3.this, Level4.class);
 
         // Button Back
-        Button btn_back = (Button)findViewById(R.id.button_back_level);
-        this.setClickBTN(btn_back, Level3.this, GameLevels.class);
+        Button btnBack = findViewById(R.id.button_back_level);
+        this.setClickBTN(btnBack, Level3.this, GameLevels.class);
 
         // Connect animation
         final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);

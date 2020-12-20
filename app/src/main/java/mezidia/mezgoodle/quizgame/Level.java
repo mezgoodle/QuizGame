@@ -1,20 +1,9 @@
 package mezidia.mezgoodle.quizgame;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +30,7 @@ public class Level extends AppCompatActivity {
             R.id.point16, R.id.point17, R.id.point18, R.id.point19, R.id.point20,
     };
 
-    public void setClickTV(TextView tv, Level fromLevel, Class toLevel) {
+    protected void setClickTV(TextView tv, Level fromLevel, Class toLevel) {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,13 +44,31 @@ public class Level extends AppCompatActivity {
         });
     }
 
-    public void setClickBTN(Button btn, Level fromLevel, Class toLevel) {
+    protected void setClickBTN(Button btn, Level fromLevel, Class toLevel) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
                     Intent intent = new Intent(fromLevel, toLevel);
                     startActivity(intent);finish();
+                } catch (Exception e) {
+                    // Empty
+                }
+            }
+        });
+    }
+
+    protected void setClickTVLevels(TextView tv, Level fromLevel, Class toLevel, int level,
+                                    int levelID) {
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    if (level >= levelID) {
+                        Intent intent = new Intent(fromLevel, toLevel);
+                        startActivity(intent);
+                        finish();
+                    }
                 } catch (Exception e) {
                     // Empty
                 }

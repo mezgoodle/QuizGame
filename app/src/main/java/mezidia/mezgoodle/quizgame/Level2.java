@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -16,12 +17,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Random;
+import androidx.annotation.RequiresApi;
 
 public class Level2 extends Level {
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +30,13 @@ public class Level2 extends Level {
         // Get time on the start
         final long startTime = stopwatch.GetTime();
 
-        TextView text_levels = findViewById(R.id.text_levels);
+        text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level2);
 
-        final ImageView img_left = (ImageView)findViewById(R.id.img_left);
+        final ImageView img_left = findViewById(R.id.img_left);
         // Create round corners for left image
         img_left.setClipToOutline(true);
-        final ImageView img_right = (ImageView)findViewById(R.id.img_right);
+        final ImageView img_right = findViewById(R.id.img_right);
         // Create round corners for right image
         img_right.setClipToOutline(true);
 
@@ -55,25 +55,20 @@ public class Level2 extends Level {
         dialog.setCancelable(false); // cant close window with back button
 
         // Insert image in dialog window
-        ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
+        ImageView previewimg = dialog.findViewById(R.id.previewimg);
         previewimg.setImageResource(R.drawable.previewimgtwo);
 
         // Set description
-        TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
+        TextView textdescription = dialog.findViewById(R.id.textdescription);
         textdescription.setText(R.string.leveltwo);
 
         // Button for closing dialog window
-        TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose, Level2.this, GameLevels.class);
+        TextView btnClose = dialog.findViewById(R.id.btnclose);
+        this.setClickTV(btnClose, Level2.this, GameLevels.class);
 
         // Button for continue the activity
-        Button btncontinue = (Button)dialog.findViewById(R.id.btncontinue);
-        btncontinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
+        Button btnContinue = dialog.findViewById(R.id.btncontinue);
+        btnContinue.setOnClickListener(v -> dialog.dismiss());
 
         dialog.show(); // show dialog window
 
@@ -87,21 +82,21 @@ public class Level2 extends Level {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
 
-        TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
+        TextView textdescriptionEnd = dialogEnd.findViewById(R.id.textdescriptionEnd);
         textdescriptionEnd.setText(R.string.leveltwoEnd);
-        TextView timerDescriptionEnd = (TextView)dialogEnd.findViewById(R.id.timerdescriptionEnd);
+        TextView timerDescriptionEnd = dialogEnd.findViewById(R.id.timerdescriptionEnd);
 
         // Button for closing dialog window
-        TextView btnclose1 = (TextView)dialogEnd.findViewById(R.id.btnclose);
-        this.setClickTV(btnclose1, Level2.this, GameLevels.class);
+        TextView btnClose1 = dialogEnd.findViewById(R.id.btnclose);
+        this.setClickTV(btnClose1, Level2.this, GameLevels.class);
 
         // Button for continue the activity
-        Button btncontinue1 = (Button)dialogEnd.findViewById(R.id.btncontinue);
-        this.setClickTV(btncontinue1, Level2.this, Level3.class);
+        Button btnContinue1 = dialogEnd.findViewById(R.id.btncontinue);
+        this.setClickTV(btnContinue1, Level2.this, Level3.class);
 
         // Button Back
-        Button btn_back = (Button)findViewById(R.id.button_back_level);
-        this.setClickBTN(btn_back, Level2.this, GameLevels.class);
+        Button btnBack = findViewById(R.id.button_back_level);
+        this.setClickBTN(btnBack, Level2.this, GameLevels.class);
 
         // Connect animation
         final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
