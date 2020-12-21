@@ -20,6 +20,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 public class Level2 extends Level {
+    final static int numImages = 10;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -45,7 +46,8 @@ public class Level2 extends Level {
 
         // Show game on fullscreen
         Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // Call dialog window on the start of game
         dialog = new Dialog(this); // create new dialog window
@@ -102,14 +104,14 @@ public class Level2 extends Level {
         final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
 
         // Left picture
-        numLeft = random.nextInt(10);               // Random int
+        numLeft = random.nextInt(numImages);               // Random int
         imgLeft.setImageResource(array.images2[numLeft]); // Get image from array
         textLeft.setText(array.texts2[numLeft]);          // Get text from array
 
         // Right picture
-        numRight = random.nextInt(10);
+        numRight = random.nextInt(numImages);
         while (numLeft == numRight) {
-            numRight = random.nextInt(10);
+            numRight = random.nextInt(numImages);
         }
         imgRight.setImageResource(array.images2[numRight]);
         textRight.setText(array.texts2[numRight]);
@@ -129,7 +131,7 @@ public class Level2 extends Level {
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft > numRight) {
                         if (count < fullPoints) {
-                            count +=1;
+                            count += 1;
                         }
 
                         // Fill progress
@@ -177,15 +179,15 @@ public class Level2 extends Level {
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
+                        numLeft = random.nextInt(numImages);               // Random int
                         imgLeft.setImageResource(array.images2[numLeft]); // Get image from array
                         imgLeft.startAnimation(a);
                         textLeft.setText(array.texts2[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(numImages);
                         while (numLeft == numRight) {
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(numImages);
                         }
                         imgRight.setImageResource(array.images2[numRight]);
                         imgRight.startAnimation(a);
@@ -290,7 +292,7 @@ public class Level2 extends Level {
             Intent intent = new Intent(Level2.this, GameLevels.class);
             startActivity(intent);finish();
         } catch (Exception e) {
-            // Empty
+            System.out.println(e);
         }
     }
 }

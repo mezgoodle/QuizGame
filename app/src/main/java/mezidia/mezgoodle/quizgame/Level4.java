@@ -19,6 +19,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 public class Level4 extends Level {
+    final static int numImages = 20;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("ResourceAsColor")
@@ -30,8 +31,8 @@ public class Level4 extends Level {
         // Get time on the start
         final long startTime = stopwatch.GetTime();
 
-        TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level4);
+        textLevels = findViewById(R.id.text_levels);
+        textLevels.setText(R.string.level4);
 
         final ImageView imgLeft = findViewById(R.id.img_left);
         // Create round corners for left image
@@ -113,14 +114,14 @@ public class Level4 extends Level {
         this.setClickBTN(btnBack, Level4.this, GameLevels.class);
 
         // Left picture
-        numLeft = random.nextInt(20);               // Random int
+        numLeft = random.nextInt(numImages);               // Random int
         imgLeft.setImageResource(array.images4[numLeft]); // Get image from array
         textLeft.setText(array.texts4[numLeft]);          // Get text from array
 
         // Right picture
-        numRight = random.nextInt(20);
+        numRight = random.nextInt(numImages);
         while (array.strong4[numLeft] == array.strong4[numRight]) {
-            numRight = random.nextInt(20);
+            numRight = random.nextInt(numImages);
         }
         imgRight.setImageResource(array.images4[numRight]);
         textRight.setText(array.texts4[numRight]);
@@ -140,7 +141,7 @@ public class Level4 extends Level {
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (array.strong4[numLeft] > array.strong4[numRight]) {
                         if (count < fullPoints) {
-                            count +=1;
+                            count += 1;
                         }
 
                         // Fill progress
@@ -180,14 +181,14 @@ public class Level4 extends Level {
                         dialogEnd.show();
                     } else {
                         // Left picture
-                        numLeft = random.nextInt(20);               // Random int
+                        numLeft = random.nextInt(numImages);               // Random int
                         imgLeft.setImageResource(array.images4[numLeft]); // Get image from array
                         textLeft.setText(array.texts4[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(20);
+                        numRight = random.nextInt(numImages);
                         while (array.strong4[numLeft] == array.strong4[numRight]) {
-                            numRight = random.nextInt(20);
+                            numRight = random.nextInt(numImages);
                         }
                         imgRight.setImageResource(array.images4[numRight]);
                         textRight.setText(array.texts4[numRight]);
@@ -214,7 +215,7 @@ public class Level4 extends Level {
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (array.strong4[numLeft] < array.strong4[numRight]) {
                         if (count < fullPoints) {
-                            count +=1;
+                            count += 1;
                         }
 
                         // Fill progress
@@ -254,14 +255,14 @@ public class Level4 extends Level {
                         dialogEnd.show();
                     } else {
                         // Left picture
-                        numLeft = random.nextInt(20);               // Random int
+                        numLeft = random.nextInt(numImages);               // Random int
                         imgLeft.setImageResource(array.images4[numLeft]); // Get image from array
                         textLeft.setText(array.texts4[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(20);
+                        numRight = random.nextInt(numImages);
                         while (array.strong4[numLeft] == array.strong4[numRight]) {
-                            numRight = random.nextInt(20);
+                            numRight = random.nextInt(numImages);
                         }
                         imgRight.setImageResource(array.images4[numRight]);
                         textRight.setText(array.texts4[numRight]);
@@ -281,7 +282,7 @@ public class Level4 extends Level {
             Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);finish();
         } catch (Exception e) {
-            // Empty
+            System.out.println(e);
         }
     }
 }

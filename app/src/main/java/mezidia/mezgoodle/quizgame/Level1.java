@@ -20,6 +20,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 public class Level1 extends Level {
+    final static int numImages = 10;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -29,7 +30,7 @@ public class Level1 extends Level {
 
         // Get time on the start
         final long startTime = stopwatch.GetTime();
-        
+
         textLevels = findViewById(R.id.text_levels);
         textLevels.setText(R.string.level1);
 
@@ -45,7 +46,8 @@ public class Level1 extends Level {
 
         // Show game on fullscreen
         Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // Call dialog window on the start of game
         dialog = new Dialog(this); // create new dialog window
@@ -92,14 +94,14 @@ public class Level1 extends Level {
         final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
 
         // Left picture
-        numLeft = random.nextInt(10);               // Random int
+        numLeft = random.nextInt(numImages);               // Random int
         imgLeft.setImageResource(array.images1[numLeft]); // Get image from array
         textLeft.setText(array.texts1[numLeft]);          // Get text from array
 
         // Right picture
-        numRight = random.nextInt(10);
+        numRight = random.nextInt(numImages);
         while (numLeft == numRight) {
-            numRight = random.nextInt(10);
+            numRight = random.nextInt(numImages);
         }
         imgRight.setImageResource(array.images1[numRight]);
         textRight.setText(array.texts1[numRight]);
@@ -119,7 +121,7 @@ public class Level1 extends Level {
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft > numRight) {
                         if (count < fullPoints) {
-                            count +=1;
+                            count += 1;
                         }
 
                         // Fill progress
@@ -167,15 +169,15 @@ public class Level1 extends Level {
                         }
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
+                        numLeft = random.nextInt(numImages);               // Random int
                         imgLeft.setImageResource(array.images1[numLeft]); // Get image from array
                         imgLeft.startAnimation(a);
                         textLeft.setText(array.texts1[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(numImages);
                         while (numLeft == numRight) {
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(numImages);
                         }
                         imgRight.setImageResource(array.images1[numRight]);
                         imgRight.startAnimation(a);
@@ -203,7 +205,7 @@ public class Level1 extends Level {
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft < numRight) {
                         if (count < fullPoints) {
-                            count +=1;
+                            count += 1;
                         }
 
                         // Fill progress
@@ -251,15 +253,15 @@ public class Level1 extends Level {
                         }
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
+                        numLeft = random.nextInt(numImages);               // Random int
                         imgLeft.setImageResource(array.images1[numLeft]); // Get image from array
                         imgLeft.startAnimation(a);
                         textLeft.setText(array.texts1[numLeft]);          // Get text from array
 
                         // Right picture
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(numImages);
                         while (numLeft == numRight) {
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(numImages);
                         }
                         imgRight.setImageResource(array.images1[numRight]);
                         imgRight.startAnimation(a);
@@ -280,7 +282,7 @@ public class Level1 extends Level {
             Intent intent = new Intent(Level1.this, GameLevels.class);
             startActivity(intent);finish();
         } catch (Exception e) {
-            // Empty
+            System.out.println(e);
         }
     }
 }
