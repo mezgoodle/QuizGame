@@ -2,7 +2,7 @@ package mezidia.mezgoodle.quizgame;
 
 public class Array {
     // Array for the first level
-    final int[] images1 = {
+    public final int[] images1 = {
             R.drawable.onelevel_zero,
             R.drawable.onelevel_one,
             R.drawable.onelevel_two,
@@ -15,7 +15,7 @@ public class Array {
             R.drawable.onelevel_nine,
     };
 
-    final int[] texts1 = {
+    public final int[] texts1 = {
             R.string.lvl1text0,
             R.string.lvl1text1,
             R.string.lvl1text2,
@@ -29,7 +29,7 @@ public class Array {
     };
 
     // Array for the second level
-    final int[] images2 = {
+    public final int[] images2 = {
             R.drawable.twolevel_one,
             R.drawable.twolevel_two,
             R.drawable.twolevel_three,
@@ -42,7 +42,7 @@ public class Array {
             R.drawable.twolevel_ten,
     };
 
-    final int[] texts2 = {
+    public final int[] texts2 = {
             R.string.lvl2text1,
             R.string.lvl2text2,
             R.string.lvl2text3,
@@ -56,7 +56,7 @@ public class Array {
     };
 
     // Array for the third level
-    final int[] images3 = {
+    public final int[] images3 = {
             R.drawable.three_level1, R.drawable.three_level2, R.drawable.three_level3,
             R.drawable.three_level4, R.drawable.three_level5, R.drawable.three_level6,
             R.drawable.three_level7, R.drawable.three_level8, R.drawable.three_level9,
@@ -66,7 +66,7 @@ public class Array {
             R.drawable.three_level19, R.drawable.three_level20, R.drawable.three_level21,
     };
 
-    final int[] texts3 = {
+    public final int[] texts3 = {
             R.string.lvl3text1, R.string.lvl3text2, R.string.lvl3text3,
             R.string.lvl3text4, R.string.lvl3text5, R.string.lvl3text6,
             R.string.lvl3text7, R.string.lvl3text8, R.string.lvl3text9,
@@ -77,7 +77,7 @@ public class Array {
     };
 
     // Array for the fourth level
-    final int[] images4 = {
+    public final int[] images4 = {
             R.drawable.edible1, R.drawable.inedible1,
             R.drawable.edible2, R.drawable.inedible2,
             R.drawable.edible3, R.drawable.inedible3,
@@ -90,7 +90,7 @@ public class Array {
             R.drawable.edible10, R.drawable.inedible10,
     };
 
-    final int[] texts4 = {
+    public final int[] texts4 = {
             R.string.lvl4text1, R.string.lvl4text2, R.string.lvl4text3,
             R.string.lvl4text4, R.string.lvl4text5, R.string.lvl4text6,
             R.string.lvl4text7, R.string.lvl4text8, R.string.lvl4text9,
@@ -100,7 +100,7 @@ public class Array {
             R.string.lvl4text19, R.string.lvl4text20,
     };
 
-    final int[] strong4 = {
+    public final int[] strong4 = {
             1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
             1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
     };
