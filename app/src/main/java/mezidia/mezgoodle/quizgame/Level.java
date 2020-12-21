@@ -19,8 +19,8 @@ public class Level extends AppCompatActivity {
     protected Random random = new Random();
     protected Stopwatch stopwatch = new Stopwatch();
     protected int count = 0;
-    protected final static int full_points = 20;
-    protected TextView text_levels;
+    protected final static int fullPoints = 20;
+    protected TextView textLevels;
 
     // Array for progress bar
     final int[] progress = {

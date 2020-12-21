@@ -36,17 +36,17 @@ public class Level3 extends Level {
         TextView text_levels = findViewById(R.id.text_levels);
         text_levels.setText(R.string.level3);
 
-        final ImageView img_left = findViewById(R.id.img_left);
+        final ImageView imgLeft = findViewById(R.id.img_left);
         // Create round corners for left image
-        img_left.setClipToOutline(true);
-        final ImageView img_right = findViewById(R.id.img_right);
+        imgLeft.setClipToOutline(true);
+        final ImageView imgRight = findViewById(R.id.img_right);
         // Create round corners for right image
-        img_right.setClipToOutline(true);
+        imgRight.setClipToOutline(true);
 
-        final TextView text_left = findViewById(R.id.text_left);
-        text_left.setTextColor(R.color.black95);
-        final TextView text_right = findViewById(R.id.text_right);
-        text_right.setTextColor(R.color.black95);
+        final TextView textLeft = findViewById(R.id.text_left);
+        textLeft.setTextColor(R.color.black95);
+        final TextView textRight = findViewById(R.id.text_right);
+        textRight.setTextColor(R.color.black95);
 
         // Show game on fullscreen
         Window w = getWindow();
@@ -64,16 +64,16 @@ public class Level3 extends Level {
         dialog.setCancelable(false); // cant close window with back button
 
         // Insert image in dialog window
-        ImageView previewimg = dialog.findViewById(R.id.previewimg);
-        previewimg.setImageResource(R.drawable.previewimgthree);
+        ImageView previewImg = dialog.findViewById(R.id.previewimg);
+        previewImg.setImageResource(R.drawable.previewimgthree);
 
         // Set background for dialog window
         LinearLayout dialogBackground = dialog.findViewById(R.id.dialogbackground);
         dialogBackground.setBackgroundResource(R.drawable.previewbackgroundthree);
 
         // Set description
-        TextView textdescription = dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.levelthree);
+        TextView textDescription = dialog.findViewById(R.id.textdescription);
+        textDescription.setText(R.string.levelthree);
 
         // Button for closing dialog window
         TextView btnClose = dialog.findViewById(R.id.btnclose);
@@ -119,37 +119,37 @@ public class Level3 extends Level {
 
         // Left picture
         numLeft = random.nextInt(21);               // Random int
-        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-        text_left.setText(array.texts3[numLeft]);          // Get text from array
+        imgLeft.setImageResource(array.images3[numLeft]); // Get image from array
+        textLeft.setText(array.texts3[numLeft]);          // Get text from array
 
         // Right picture
         numRight = random.nextInt(21);
         while (numLeft == numRight) {
             numRight = random.nextInt(21);
         }
-        img_right.setImageResource(array.images3[numRight]);
-        text_right.setText(array.texts3[numRight]);
+        imgRight.setImageResource(array.images3[numRight]);
+        textRight.setText(array.texts3[numRight]);
 
         // Listen clicking on left image
-        img_left.setOnTouchListener(new View.OnTouchListener() {
+        imgLeft.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 // Touch image
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    img_right.setEnabled(false); // Block right picture
+                    imgRight.setEnabled(false); // Block right picture
                     if (numLeft > numRight) {
-                        img_left.setImageResource(R.drawable.img_true);
+                        imgLeft.setImageResource(R.drawable.img_true);
                     } else {
-                        img_left.setImageResource(R.drawable.img_false);
+                        imgLeft.setImageResource(R.drawable.img_false);
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft > numRight) {
-                        if (count < full_points) {
+                        if (count < fullPoints) {
                             count +=1;
                         }
 
                         // Fill progress
-                        for (int i = 0; i < full_points; i++) {
+                        for (int i = 0; i < fullPoints; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points);
                         }
@@ -167,7 +167,7 @@ public class Level3 extends Level {
                             }
                         }
                         // Fill progress
-                        for (int i = 0; i < full_points - 1; i++) {
+                        for (int i = 0; i < fullPoints - 1; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points);
                         }
@@ -177,7 +177,7 @@ public class Level3 extends Level {
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
                     }
-                    if (count == full_points) {
+                    if (count == fullPoints) {
                         // Exit from level
                         final long finishTime = stopwatch.GetTime();
                         String result = stopwatch.GetResult(finishTime - startTime);
@@ -194,20 +194,20 @@ public class Level3 extends Level {
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(21);               // Random int
-                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);          // Get text from array
+                        imgLeft.setImageResource(array.images3[numLeft]); // Get image from array
+                        imgLeft.startAnimation(a);
+                        textLeft.setText(array.texts3[numLeft]);          // Get text from array
 
                         // Right picture
                         numRight = random.nextInt(21);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(21);
                         }
-                        img_right.setImageResource(array.images3[numRight]);
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);
+                        imgRight.setImageResource(array.images3[numRight]);
+                        imgRight.startAnimation(a);
+                        textRight.setText(array.texts3[numRight]);
 
-                        img_right.setEnabled(true);
+                        imgRight.setEnabled(true);
                     }
                 }
                 return true;
@@ -215,25 +215,25 @@ public class Level3 extends Level {
         });
 
         // Listen clicking on right image
-        img_right.setOnTouchListener(new View.OnTouchListener() {
+        imgRight.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 // Touch image
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    img_left.setEnabled(false); // Block left picture
+                    imgLeft.setEnabled(false); // Block left picture
                     if (numLeft < numRight) {
-                        img_right.setImageResource(R.drawable.img_true);
+                        imgRight.setImageResource(R.drawable.img_true);
                     } else {
-                        img_right.setImageResource(R.drawable.img_false);
+                        imgRight.setImageResource(R.drawable.img_false);
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (numLeft < numRight) {
-                        if (count < full_points) {
+                        if (count < fullPoints) {
                             count +=1;
                         }
 
                         // Fill progress
-                        for (int i = 0; i < full_points; i++) {
+                        for (int i = 0; i < fullPoints; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points);
                         }
@@ -251,7 +251,7 @@ public class Level3 extends Level {
                             }
                         }
                         // Fill progress
-                        for (int i = 0; i < full_points - 1; i++) {
+                        for (int i = 0; i < fullPoints - 1; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points);
                         }
@@ -261,7 +261,7 @@ public class Level3 extends Level {
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
                     }
-                    if (count == full_points) {
+                    if (count == fullPoints) {
                         // Exit from level
                         final long finishTime = stopwatch.GetTime();
                         String result = stopwatch.GetResult(finishTime - startTime);
@@ -278,20 +278,20 @@ public class Level3 extends Level {
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(21);               // Random int
-                        img_left.setImageResource(array.images3[numLeft]); // Get image from array
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);          // Get text from array
+                        imgLeft.setImageResource(array.images3[numLeft]); // Get image from array
+                        imgLeft.startAnimation(a);
+                        textLeft.setText(array.texts3[numLeft]);          // Get text from array
 
                         // Right picture
                         numRight = random.nextInt(21);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(21);
                         }
-                        img_right.setImageResource(array.images3[numRight]);
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);
+                        imgRight.setImageResource(array.images3[numRight]);
+                        imgRight.startAnimation(a);
+                        textRight.setText(array.texts3[numRight]);
 
-                        img_left.setEnabled(true);
+                        imgLeft.setEnabled(true);
                     }
                 }
                 return true;
