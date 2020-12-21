@@ -40,7 +40,7 @@ public class Level extends AppCompatActivity {
                     Intent intent = new Intent(fromLevel, toLevel);
                     startActivity(intent);finish();
                 } catch (Exception e) {
-                    // Empty
+                    System.out.println(e);
                 }
             }
         });
@@ -55,7 +55,7 @@ public class Level extends AppCompatActivity {
                     Intent intent = new Intent(fromLevel, toLevel);
                     startActivity(intent);finish();
                 } catch (Exception e) {
-                    // Empty
+                    System.out.println(e);
                 }
             }
         });
@@ -74,7 +74,7 @@ public class Level extends AppCompatActivity {
                         finish();
                     }
                 } catch (Exception e) {
-                    // Empty
+                    System.out.println(e);
                 }
             }
         });
