@@ -53,7 +53,7 @@ public class Level1 extends Level {
         dialog = new Dialog(this); // create new dialog window
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
         dialog.setContentView(R.layout.previewdialog); // path to layout of dialog window
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.setCancelable(false); // cant close window with back button
 
         // Button for closing dialog window
@@ -66,12 +66,11 @@ public class Level1 extends Level {
 
         dialog.show(); // show dialog window
 
-        //_______________________________
         // Call dialog window on the end of game
         dialogEnd = new Dialog(this); // create new dialog window
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
         dialogEnd.setContentView(R.layout.dialogend); // path to layout of dialog window
-        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button

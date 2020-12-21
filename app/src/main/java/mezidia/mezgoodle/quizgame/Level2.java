@@ -53,7 +53,7 @@ public class Level2 extends Level {
         dialog = new Dialog(this); // create new dialog window
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
         dialog.setContentView(R.layout.previewdialog); // path to layout of dialog window
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.setCancelable(false); // cant close window with back button
 
         // Insert image in dialog window
@@ -74,12 +74,11 @@ public class Level2 extends Level {
 
         dialog.show(); // show dialog window
 
-        //_______________________________
         // Call dialog window on the end of game
         dialogEnd = new Dialog(this); // create new dialog window
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide window title
         dialogEnd.setContentView(R.layout.dialogend); // path to layout of dialog window
-        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // transparent color of dialog window
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false); // cant close window with back button
@@ -104,7 +103,7 @@ public class Level2 extends Level {
         final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
 
         // Left picture
-        numLeft = random.nextInt(numImages);               // Random int
+        numLeft = random.nextInt(numImages);              // Random int
         imgLeft.setImageResource(array.images2[numLeft]); // Get image from array
         textLeft.setText(array.texts2[numLeft]);          // Get text from array
 
@@ -179,7 +178,7 @@ public class Level2 extends Level {
                         timerDescriptionEnd.setText(result);
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(numImages);               // Random int
+                        numLeft = random.nextInt(numImages);              // Random int
                         imgLeft.setImageResource(array.images2[numLeft]); // Get image from array
                         imgLeft.startAnimation(a);
                         textLeft.setText(array.texts2[numLeft]);          // Get text from array
@@ -263,7 +262,7 @@ public class Level2 extends Level {
                         }
                         dialogEnd.show();
                     } else {
-                        numLeft = random.nextInt(10);               // Random int
+                        numLeft = random.nextInt(10);              // Random int
                         imgLeft.setImageResource(array.images2[numLeft]); // Get image from array
                         imgLeft.startAnimation(a);
                         textLeft.setText(array.texts2[numLeft]);          // Get text from array

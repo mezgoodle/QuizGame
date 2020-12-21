@@ -3,13 +3,15 @@ package mezidia.mezgoodle.quizgame;
 import android.annotation.SuppressLint;
 
 public class Stopwatch {
-    final int nanoseconds = 1000000000;
-    final int seconds = 60;
+    private final int nanoseconds = 1000000000;
+    private final int seconds = 60;
 
+    // Get current time
     public long GetTime() {
         return System.nanoTime() / this.nanoseconds;
     }
 
+    // Get final time
     @SuppressLint("DefaultLocale")
     public String GetResult(long time) {
         int minutes = (int) (time / this.seconds);

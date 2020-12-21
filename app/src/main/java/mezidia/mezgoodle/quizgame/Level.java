@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class Level extends AppCompatActivity {
+    // Common fields
     protected Dialog dialog;
     protected Dialog dialogEnd;
     protected int numLeft;
@@ -30,6 +31,7 @@ public class Level extends AppCompatActivity {
             R.id.point16, R.id.point17, R.id.point18, R.id.point19, R.id.point20,
     };
 
+    // Click listener on TextView
     protected void setClickTV(TextView tv, Level fromLevel, Class toLevel) {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,7 @@ public class Level extends AppCompatActivity {
         });
     }
 
+    // Click listener on Button
     protected void setClickBTN(Button btn, Level fromLevel, Class toLevel) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,7 @@ public class Level extends AppCompatActivity {
         });
     }
 
+    // Click listener on another TextView
     protected void setClickTVLevels(TextView tv, Level fromLevel, Class toLevel, int level,
                                     int levelID) {
         tv.setOnClickListener(new View.OnClickListener() {
