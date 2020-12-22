@@ -7,13 +7,13 @@ class Stopwatch {
     private val seconds = 60
 
     // Get current time
-    fun GetTime(): Long {
+    fun getTime(): Long {
         return System.nanoTime() / nanoseconds
     }
 
     // Get final time
     @SuppressLint("DefaultLocale")
-    fun GetResult(time: Long): String {
+    fun getResult(time: Long): String {
         val minutes = (time / seconds).toInt()
         val seconds = (time - seconds * minutes).toInt()
         return if (minutes == 0) {

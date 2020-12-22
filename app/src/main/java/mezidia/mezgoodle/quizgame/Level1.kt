@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import mezidia.mezgoodle.quizgame.Level1
 
 class Level1 : Level() {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -25,7 +24,7 @@ class Level1 : Level() {
         setContentView(R.layout.universal)
 
         // Get time on the start
-        val startTime = stopwatch.GetTime()
+        val startTime = stopwatch.getTime()
 
         textLevels = findViewById(R.id.text_levels)
         textLevels!!.setText(R.string.level1)
@@ -145,8 +144,8 @@ class Level1 : Level() {
                 }
                 if (count == fullPoints) {
                     // Exit from level
-                    val finishTime = stopwatch.GetTime()
-                    val result = stopwatch.GetResult(finishTime - startTime)
+                    val finishTime = stopwatch.getTime()
+                    val result = stopwatch.getResult(finishTime - startTime)
                     timerDescriptionEnd.text = result
                     val save = getSharedPreferences("Save", Context.MODE_PRIVATE)
                     val level = save.getInt("Level", 1)
@@ -222,8 +221,8 @@ class Level1 : Level() {
                 }
                 if (count == fullPoints) {
                     // Exit from level
-                    val finishTime = stopwatch.GetTime()
-                    val result = stopwatch.GetResult(finishTime - startTime)
+                    val finishTime = stopwatch.getTime()
+                    val result = stopwatch.getResult(finishTime - startTime)
                     timerDescriptionEnd.text = result
                     val save = getSharedPreferences("Save", Context.MODE_PRIVATE)
                     val level = save.getInt("Level", 1)
