@@ -26,14 +26,18 @@ class Level1 : Level() {
 
         // Get time on the start
         val startTime = stopwatch.GetTime()
+
         textLevels = findViewById(R.id.text_levels)
         textLevels!!.setText(R.string.level1)
+
         val imgLeft = findViewById<ImageView>(R.id.img_left)
         // Create round corners for left image
         imgLeft.clipToOutline = true
+
         val imgRight = findViewById<ImageView>(R.id.img_right)
         // Create round corners for right image
         imgRight.clipToOutline = true
+
         val textLeft = findViewById<TextView>(R.id.text_left)
         val textRight = findViewById<TextView>(R.id.text_right)
 
@@ -66,6 +70,7 @@ class Level1 : Level() {
         dialogEnd!!.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT)
         dialogEnd!!.setCancelable(false) // cant close window with back button
+
         val timerDescriptionEnd = dialogEnd!!.findViewById<TextView>(R.id.timerdescriptionEnd)
 
         // Button for closing dialog window

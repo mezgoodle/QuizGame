@@ -11,11 +11,14 @@ class GameLevels : Level() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gamelevels)
+
         val save = getSharedPreferences("Save", Context.MODE_PRIVATE)
         val level = save.getInt("Level", 1)
+
         val w = window
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         val btnBack = findViewById<Button>(R.id.button_back)
         setClickBTN(btnBack, this@GameLevels, MainActivity::class.java)
 
@@ -34,6 +37,7 @@ class GameLevels : Level() {
         // Button for step on level4
         val textView4 = findViewById<TextView>(R.id.textView4)
         setClickTVLevels(textView4, this@GameLevels, Level4::class.java, level, 4)
+
         val x = intArrayOf(
                 R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4, R.id.textView5,
                 R.id.textView6, R.id.textView7, R.id.textView8, R.id.textView9, R.id.textView10,
@@ -41,6 +45,7 @@ class GameLevels : Level() {
                 R.id.textView16, R.id.textView17, R.id.textView18, R.id.textView19, R.id.textView20,
                 R.id.textView21, R.id.textView22, R.id.textView23, R.id.textView24, R.id.textView25,
                 R.id.textView26, R.id.textView27, R.id.textView28, R.id.textView29, R.id.textView30)
+
         for (i in 1 until level) {
             val tv = findViewById<TextView>(x[i])
             tv.text = "" + (i + 1)

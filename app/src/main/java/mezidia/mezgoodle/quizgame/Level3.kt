@@ -29,14 +29,18 @@ class Level3 : Level() {
 
         // Get time on the start
         val startTime = stopwatch.GetTime()
+
         textLevels = findViewById(R.id.text_levels)
         textLevels!!.setText(R.string.level3)
+
         val imgLeft = findViewById<ImageView>(R.id.img_left)
         // Create round corners for left image
         imgLeft.clipToOutline = true
+
         val imgRight = findViewById<ImageView>(R.id.img_right)
         // Create round corners for right image
         imgRight.clipToOutline = true
+
         val textLeft = findViewById<TextView>(R.id.text_left)
         textLeft.setTextColor(R.color.black95)
         val textRight = findViewById<TextView>(R.id.text_right)
@@ -91,6 +95,7 @@ class Level3 : Level() {
         // Set background image
         val dialogBackgroundEnd = dialogEnd!!.findViewById<LinearLayout>(R.id.dialogbackground)
         dialogBackgroundEnd.setBackgroundResource(R.drawable.previewbackgroundthree)
+
         val textDescriptionEnd = dialogEnd!!.findViewById<TextView>(R.id.textdescriptionEnd)
         textDescriptionEnd.setText(R.string.levelthreeEnd)
         val timerDescriptionEnd = dialogEnd!!.findViewById<TextView>(R.id.timerdescriptionEnd)
