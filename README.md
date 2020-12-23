@@ -39,7 +39,7 @@ Here you can see build status of [continuous integration](https://en.wikipedia.o
 I'm using [Codacy](https://www.codacy.com/) to automate my code quality.
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eddd563787e94a95adfc7efc32116228)](https://www.codacy.com/gh/mezgoodle/QuizGame/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/QuizGame&amp;utm_campaign=Badge_Grade)
- 
+
 ## Screenshots
 
 - Game levels
