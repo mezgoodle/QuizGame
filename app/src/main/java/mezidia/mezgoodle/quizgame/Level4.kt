@@ -47,7 +47,7 @@ class Level4 : Level() {
         // Show game on fullscreen
         val w = window
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         // Set background image for dialog window
         val background = findViewById<ImageView>(R.id.background)
@@ -87,7 +87,7 @@ class Level4 : Level() {
         dialogEnd!!.setContentView(R.layout.dialogend) // path to layout of dialog window
         dialogEnd!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialogEnd!!.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT)
+            WindowManager.LayoutParams.MATCH_PARENT)
         dialogEnd!!.setCancelable(false) // cant close window with back button
 
         // Set background image
