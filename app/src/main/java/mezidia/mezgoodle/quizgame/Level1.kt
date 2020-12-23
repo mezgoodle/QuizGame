@@ -26,6 +26,7 @@ class Level1 : Level() {
         // Get time on the start
         val startTime = stopwatch.getTime()
 
+        // Set level text
         textLevels = findViewById(R.id.text_levels)
         textLevels!!.setText(R.string.level1)
 

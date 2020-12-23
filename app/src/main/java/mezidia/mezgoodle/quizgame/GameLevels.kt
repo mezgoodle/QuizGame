@@ -12,13 +12,15 @@ class GameLevels : Level() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gamelevels)
 
+        // Set first level open
         val save = getSharedPreferences("Save", Context.MODE_PRIVATE)
         val level = save.getInt("Level", 1)
 
+        // Set window
         val w = window
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
+        // Back button
         val btnBack = findViewById<Button>(R.id.button_back)
         setClickBTN(btnBack, this@GameLevels, MainActivity::class.java)
 
@@ -38,6 +40,7 @@ class GameLevels : Level() {
         val textView4 = findViewById<TextView>(R.id.textView4)
         setClickTVLevels(textView4, this@GameLevels, Level4::class.java, level, 4)
 
+        // Level views
         val x = intArrayOf(
                 R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4, R.id.textView5,
                 R.id.textView6, R.id.textView7, R.id.textView8, R.id.textView9, R.id.textView10,
@@ -46,6 +49,7 @@ class GameLevels : Level() {
                 R.id.textView21, R.id.textView22, R.id.textView23, R.id.textView24, R.id.textView25,
                 R.id.textView26, R.id.textView27, R.id.textView28, R.id.textView29, R.id.textView30)
 
+        // Set text on open levels
         for (i in 1 until level) {
             val tv = findViewById<TextView>(x[i])
             tv.text = "" + (i + 1)
